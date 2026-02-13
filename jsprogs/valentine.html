@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Will You Be My Valentine?</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      margin-top: 100px;
+      background-color: #ffe6f0;
+    }
+
+    h1 {
+      font-size: 40px;
+    }
+
+    button {
+      padding: 15px 25px;
+      font-size: 20px;
+      margin: 10px;
+      cursor: pointer;
+      border-radius: 10px;
+      border: none;
+    }
+
+    #yesBtn {
+      background-color: #ff4d88;
+      color: white;
+      transition: 0.3s;
+    }
+
+    #noBtn {
+      background-color: #666;
+      color: white;
+    }
+
+    .celebrate {
+      font-size: 50px;
+      color: red;
+      animation: pop 0.5s ease infinite alternate;
+    }
+
+    @keyframes pop {
+      from { transform: scale(1); }
+      to { transform: scale(1.1); }
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1 id="question">Will you be my Valentine? 💕</h1>
+
+  <button id="yesBtn">Yes 💖</button>
+  <button id="noBtn">No 😢</button>
+
+  <script>
+    let size = 20;
+
+    const yesBtn = document.getElementById("yesBtn");
+    const noBtn = document.getElementById("noBtn");
+    const question = document.getElementById("question");
+
+    noBtn.addEventListener("click", function() {
+      size += 10;
+      yesBtn.style.fontSize = size + "px";
+    });
+
+    yesBtn.addEventListener("click", function() {
+      document.body.innerHTML = "<h1 class='celebrate'>YAY I LOVE YOU 💕🎉</h1>";
+      document.body.style.backgroundColor = "#ff99cc";
+    });
+  </script>
+
+</body>
+</html>

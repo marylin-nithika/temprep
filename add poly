@@ -1,0 +1,12 @@
+
+
+struct node* addpoly(){
+    struct node* t1 = p1;
+    struct node* t2 = p2;
+
+    do{
+        if(t1->exp == t2->exp){
+            result = insert(result)
+        }
+    }
+}

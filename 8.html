@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>urmom</title>
+<style>
+
+p{
+    border : 1px solid black;
+    margin : 20px auto;
+    transition :transform 0.5s ease;
+    background-image : linear-gradient(to right,pink,purple);
+    padding : 20px;
+}
+
+.moved{
+    transform : translateY(-40px);
+}
+</style>
+</head>
+<body>
+
+
+<div>
+<p id="p1">p1</p>
+<p id="p2">p2</p>
+<p id="p3">p3</p>
+</div>
+
+<script>
+    function addHoverEffect(p){
+        p.addEventListener('mouseenter',function(){
+            p.classList.add('moved');
+        },false);
+        p.addEventListener('mouseleave',function(){
+            p.classList.remove('moved');
+        },false);
+    }
+
+    var paras = document.getElementsByTagName('p');
+    for(var i = 0;i<paras.length;i++){
+        addHoverEffect(paras[i]);
+    }
+</script>
+</body>
+</html>

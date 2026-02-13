@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    body{
+        text-align: center;
+        margin : 200px auto;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        background-image : url('lovee.jpg');
+    }
+
+    h1{
+        font-size : 40px;
+    }
+
+    button{
+    margin: 10px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    }
+
+    .box{
+        padding: 20px;
+        border-radius: 20px;
+        width: fit-content;
+        margin: 0 auto 20px auto;
+        background-color: bisque;
+        transition: 0.5s ease;
+    }
+    #yesBtn{
+        background-color : palevioletred;
+    }
+
+    #noBtn{
+        background-color: gray;
+    }
+
+    .box:hover {
+    box-shadow: 0 0 25px palevioletred;
+    }
+
+    .celebrate {
+      font-size: 50px;
+      animation: pop 0.5s ease infinite alternate;
+    }
+
+    @keyframes pop {
+      from { transform: scale(1); }
+      to { transform: scale(1.1); }
+    }
+</style>
+</head>
+<body>
+
+    <div class = "repeat-y">
+    </div>
+
+    <h2>Hey adhyybearrrr</h2>
+    <div class = "box">
+    <h1 id = "question">Will you be my valentine?</h1>
+    </div>
+    <h4>please dont say no 🥺</h4>
+    <button id="yesBtn">yess💗💗</button>
+    <button id="noBtn">no :c</button>
+
+    <script>
+        let size = 20;
+
+        const yesBtn = document.getElementById("yesBtn");
+        const noBtn = document.getElementById("noBtn");
+        const question = document.getElementById("question");
+
+        noBtn.addEventListener("click", function(){
+            size = size + 10;
+            yesBtn.style.fontSize = size+"px";
+        });
+
+        yesBtn.addEventListener("click", function() {
+            document.body.innerHTML = "<h1 class='celebrate'>YAY U MY VALENTINE FOREVER💕🎉</h1>";
+            document.body.style.backgroundColor = "#ff99cc";
+        });
+
+    </script>
+
+</body>
+</html>

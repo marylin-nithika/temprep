@@ -1,0 +1,19 @@
+
+        student{
+            display:block;
+            border:2px solid#4CAF50;
+            padding: 15px;
+            margin:10px;
+            background-color:#f9f9f9;
+            border-radius: 8px;
+        }
+        usn,name,college,branch,year,email{
+            display:block;
+            margin:3px 0;
+        }
+        usn:before{content:"USN:";font-weight:bold;}
+        name:before{content:"Name:";font-weight:bold;}
+        college:before{content:"College:";font-weight:bold;}
+        branch:before{content:"Branch:";font-weight:bold;}
+        year:before{content:"Year of Joining:";font-weight:bold;}
+        email:before{content:"Email:";font-weight:bold;}

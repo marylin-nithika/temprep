@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>welcome to restro</h1>
+
+    <button onclick = "
+    priceCoffee = priceCoffee + 5;
+    console.log(`price is : $${priceCoffee}`);
+    ">coffee</button>
+
+
+    <button onclick = "
+    priceBaegal = priceBaegal + 3;
+    console.log(`price is : $${priceBaegal}`);
+    ">baegel</button>
+
+
+
+    <button onclick = "
+    priceSoup = priceSoup + 9;
+    console.log(`price is : $${priceSoup}`);
+    ">soup</button>
+
+
+    <button onclick = "
+    cost = cost + priceCoffee + priceBaegal + priceSoup;
+    console.log(`total cost : $${cost}`);
+    ">total bill</button>
+
+    <button onclick = "
+    bill = cost * 0.1 + cost;
+    console.log(`total bill : $${bill}`);
+    ">total bill</button>
+
+    <script>
+        let name = 'merlin';
+        console.log(`My name is : ${name}`);
+
+        let priceCoffee = 0;
+        let priceBaegal = 0;
+        let priceSoup = 0;
+        let cost = 0
+        let bill = 0;
+
+
+
+    </script>
+</body>
+</html>

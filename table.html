@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Country Capital</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background: #f8f9fa;
+            text-align: center;
+            margin :300px auto;
+
+        }
+        h2{
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        select{
+            padding: 10px 15px;
+            font-size: 16px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            outline: none;
+        }
+        #capital{
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <select id = "countrydropdown">
+        <option value = "">choose a country</option>
+        <option>India</option>
+        <option>Japan</option>
+        <option>China</option>
+        <option>Australia</option>
+    </select>
+
+    <div id = "capitals"></div>
+
+    <script>
+        const countrycapitals = {
+            "India" : "new delhi",
+            "Japan" : "Tokyo",
+            "China" : "Beijing",
+            "Australia" : "Canberra"
+        };
+
+        const dropdown = document.getElementById("countrydropdown");
+        const capitalDisplay = document.getElementById("capitals");
+
+        dropdown.addEventListener("change", function(){
+            const country = this.value;
+            if(country && countrycapitals[country]){
+                capitalDisplay.textContent = "Capital: " + countrycapitals[country];
+            }
+            else{
+                capitalDisplay.textContent = "";
+            }
+        });
+    </script>
+</body>
+</html>

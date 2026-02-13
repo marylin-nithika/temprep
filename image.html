@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>  
+body{
+    background : url('shrek t pose.jpg');
+    background-repeat : no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+.repeat-box{
+    background: url('shrek t pose.jpg');
+    background-repeat: repeat;
+    background-size :50px 50px;
+    background-position : center;
+    width: 100px;
+    height: 100px;
+    margin: 20px auto;
+    border : 1px solid black;
+}
+
+.repeat-y-box{
+    background : url('zhong_xina.jpg');
+    background-repeat : repeat - y;
+    background-size :contain;
+    background-position : center;
+    width : 100px;
+    height : 200px;
+    margin :auto;
+}
+
+.repeat-x-box{
+    background-image : url('zhong_xina.jpg');
+    background-repeat : repeat;
+    background-size :contain;
+    background-position : center;
+    width : 200px;
+    height : 100px;
+    margin :auto;
+}
+</style>
+</head>
+<body>
+    <h2>Background image demo</h2>
+    <div class = "repeat-box">this is for repeat box</div>
+    <div class = "repeat-y-box">repeat-y</div>
+    <div class = "repeat-x-box">repeat-x</div>
+</body>
+</html>
